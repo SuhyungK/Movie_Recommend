@@ -12,7 +12,7 @@
           <router-link class="mx-3" :to="{ name: 'random'}">Random</router-link> |
         </li>
         <li>
-          <router-link class="mx-3" :to="{name: 'watchList'}">Watch List</router-link>
+          <router-link class="mx-3" :to="{name: 'watchList'}">Watch List</router-link> | 
         </li>
         <li>
           <router-link class="mx-3" :to="{name: 'randomRecommend'}">Random Recommend</router-link>
@@ -43,5 +43,13 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  float: left;
 }
 </style>

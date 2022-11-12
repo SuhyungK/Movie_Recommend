@@ -5,8 +5,8 @@
     </div>
     <!-- <img :src="posterUrl" alt=""> -->
     <div class="movie_card" id="bright">
-      <div class="info_section">
-        <img :src="bgPosterUrl" alt="bgImg" style="z-index:-1; position: absolute; left:-150px; width:1000px;">
+      <div class="info_section" :style="cssVars">
+        <!-- <img :src="bgPosterUrl" alt="bgImg" style="z-index:-1; position: absolute; left:-150px; width:1000px;"> -->
         <div class="movie_header">
           <img :src="posterUrl" alt="miniPosterUrl">
           <h1>{{ movieTitle }}</h1>
@@ -39,6 +39,12 @@ export default {
       voteAverage: 0,
       overview: null,
     }
+  },
+  computed: {
+    cssVars() {
+      let overlay = 'linear-gradient(to right, #0d0d0c 40%, transparent 100%)'
+      return 'background-image : ' + overlay + ', url(' + this. bgPosterUrl + '); background-size: cover; background-position: left' 
+    },
   },
   methods: {
     pickRandomMovie() {
